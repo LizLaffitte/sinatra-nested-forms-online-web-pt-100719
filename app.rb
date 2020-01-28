@@ -14,6 +14,7 @@ module FormsLab
 
     post '/pirates' do
       @pirate = Pirate.new(params)
+      puts params
       params[:pirate][:ships].collect do |prms|
         Ship.new(prms)
       end
